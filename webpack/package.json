@@ -1,0 +1,13 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"webpack",
+    "server":"webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
