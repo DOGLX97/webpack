@@ -3,3 +3,8 @@
     height: 200px;
     background: #f0f;
 }
+#div2{
+    width: 200px;
+    height: 200px;
+    background: url('../images/nancy1.jpeg') no-repeat;
+}
