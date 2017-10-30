@@ -8,7 +8,8 @@ module.exports={
     },
     output:{
         path:path.resolve(__dirname,'dist'),
-        filename:'[name].js'
+        filename:'[name].js',
+        publicPath:'http://localhost:8080/'
     },
     module:{
         rules:[
@@ -37,6 +38,9 @@ module.exports={
                 use:[{
                     loader:'html-withimg-loader'
                 }]
+            },{
+                test:/\.scss$/,
+                use:['css-loader','style-loader','sass-loader']
             }
         ]
     },
