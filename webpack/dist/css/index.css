@@ -1,10 +1,39 @@
-#div1{
-    width: 200px;
-    height: 200px;
-    background: #f0f;
+#div1 {
+  width: 200px;
+  height: 200px;
+  background: #f0f;
 }
-#div2{
-    width: 200px;
-    height: 200px;
-    background: url(http://localhost:8080/images/28b7e9dea7ce955fce0ad122a4656e9e.jpeg) no-repeat;
+
+#div2 {
+  width: 200px;
+  height: 200px;
+  background: url(http://localhost:8081/images/28b7e9dea7ce955fce0ad122a4656e9e.jpeg) no-repeat;
+}
+
+#div5 {
+  border-radius: 50%;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#div6 {
+  width: 200px;
+}
+
+#div7 {
+  width: 200px;
+}
+
+.test {
+  font-size: 12px;
+}
+
+#div4 {
+  width: 200px;
+  height: 200px;
+  background: #ff0;
+  display: flex;
 }

@@ -8,3 +8,32 @@
     height: 200px;
     background: url('../images/nancy1.jpeg') no-repeat;
 }
+#div5{
+    border-radius:50%;
+    transform: rotate(30deg); 
+    display:flex;
+}
+.aa{
+    width: 300px;
+}
+#bb{
+   font-size: 12px;  
+}
+#div7 .aa{
+    font-size: 12px;
+}
+#div6{
+    width: 200px;
+}
+#div7{
+    width: 200px;
+}
+#div7 .bb{
+    font-size: 12px;
+}
+.test{
+    font-size: 12px;
+}
+p{
+    font-size: 12px;
+}
