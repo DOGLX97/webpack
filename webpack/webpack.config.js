@@ -4,10 +4,11 @@ const HtmlPlugin=require('html-webpack-plugin');
 const ExtractTextPlugin=require('extract-text-webpack-plugin');
 const UglifyJsPlugin=require('uglifyjs-webpack-plugin');
 const PurifyCSSPlugin=require('purifycss-webpack');
+const Webpack=require('webpack');
+const entry=require('./webpack_config/entry_config.js');
+const CopyWebpackPlugin=require('copy-webpack-plugin');
 module.exports={
-    entry:{
-        entry:"./src/entry.js"
-    },
+    entry: entry,
     output:{
         path:path.resolve(__dirname,'dist'),
         filename:'[name].js',
@@ -87,6 +88,20 @@ module.exports={
         new PurifyCSSPlugin({
             paths:glob.sync(path.join(__dirname,'src/*.html'))
         }),
+        new Webpack.BannerPlugin('翻版必究'),
+        new Webpack.ProvidePlugin({
+            $:'jquery',
+            vue:'vue',
+        }),
+        new Webpack.optimize.CommonsChunkPlugin({
+            name:['jquery','vue'],
+            filename:'assets/js/[name].js',
+            minChunks: 2
+        }),
+        new CopyWebpackPlugin([{
+            from: __dirname+'/src/public',
+            to: './public'
+        }]),
         // new UglifyJsPlugin()
     ],
     devServer:{
@@ -94,5 +109,10 @@ module.exports={
         host:'localhost',
         compress:true,
         port:8081
+    },
+    watchOptions:{
+        poll:1000,
+        aggregeateTimeout:500,
+        ignored:/node_modules/
     }
 }
