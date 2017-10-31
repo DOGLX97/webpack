@@ -11,3 +11,12 @@ let b=10;
 
 let json=require('../author.json');
 $('#json').html(`作者是${json.name},年龄是${json.age}`);
+class Idol{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    show(){
+        return [this.name,this.age];
+    }
+}
